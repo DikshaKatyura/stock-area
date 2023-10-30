@@ -1,0 +1,29 @@
+.form-container{
+    max-width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1px solid #ccc;
+    padding: 2rem;
+    cursor: pointer;
+    box-shadow:0 0 11px 1px #f1f1f1;
+    border-radius: 0.75rem;
+}
+.radio-inputs{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.radio-inputs span{
+    font-weight: 600;
+    font-size: 1rem;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+}

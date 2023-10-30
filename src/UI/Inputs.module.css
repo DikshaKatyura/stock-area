@@ -1,0 +1,32 @@
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap:0.25rem;
+    justify-content: space-between;
+    width: 100%;
+}
+label{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.inputs input{
+    padding: 0.5rem;
+    outline: none;
+    border-radius: 0.5rem;
+    border: 0.1px solid #ccc;
+    color: gray;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.inputs input:focus-visible{
+    outline: none;
+}
+.radios{
+    flex-direction: row;
+    gap: 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+.radios input{
+    margin-bottom: 0;
+}

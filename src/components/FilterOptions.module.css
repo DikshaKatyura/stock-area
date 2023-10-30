@@ -1,0 +1,27 @@
+.filterContainer{
+    display: flex;
+    align-items: baseline;
+    column-gap: 1rem;
+    padding: 0 2rem;
+}
+.filterName{
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+}
+.filterName div{
+    border-radius: 0.75rem;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    box-shadow:0 0 11px 1px #f1f1f1;
+}
+.filterName div:hover{
+    transform: scale(1.01); 
+}

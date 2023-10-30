@@ -1,0 +1,16 @@
+.btn{
+    margin-top: 1rem;
+    background: navy;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition:all ease-in-out 0.3s;
+    font-weight: 600;
+}
+.btn:hover{
+    transform: scale(1.01);
+}
