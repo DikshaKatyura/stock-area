@@ -1,8 +1,17 @@
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import Button from '../UI/Button';
 
 import styles from './WarehouseList.module.css';
+import { useDispatch } from 'react-redux';
+import { filterActions } from '../store/filterSlice';
 const WarehouseDetails = ({id,warehouse}) =>{
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const routeToHomeHandler = () =>{
+        dispatch(filterActions.setFilteredWarehouseToEmpty());
+        dispatch(filterActions.setLoading(true));
+        navigate('/')
+    }
   
     return(
         <div className={styles.container}>
@@ -44,7 +53,7 @@ const WarehouseDetails = ({id,warehouse}) =>{
     </div>
     <div className={styles.btns}>
    <Link to={'edit'} relative='path'><Button>Edit</Button></Link>
-   <Link to={`..`} relative='path'><Button style={{backgroundColor:'red'}}>Cancel</Button></Link>
+   <Button style={{backgroundColor:'red'}} onClick={routeToHomeHandler}>Cancel</Button>
     </div>
 
     </div>

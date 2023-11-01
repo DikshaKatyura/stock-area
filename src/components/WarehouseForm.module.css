@@ -14,7 +14,8 @@
     display: flex;
     gap: 1rem;
     width: 100%;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 1rem;
 }
 .radio-inputs span{
@@ -26,4 +27,35 @@
     justify-content: space-around;
     width: 100%;
     margin-top: 2rem;
+}
+select{
+    border: 0.1px solid #ccc;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
+select:focus-visible, option:focus-visible{
+    outline: none;
+}
+option:hover{
+    background-color: #f1f1f1;
+}
+
+@media (max-width : 768px) and (min-width : 479px) {
+    .form-container{
+        max-width: 50%;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width : 480px) {
+    .form-container{
+        max-width: 50%;
+        margin-bottom: 3rem;
+    }
+    .btns{
+        flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    }
 }

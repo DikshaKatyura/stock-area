@@ -10,6 +10,7 @@
     font-size: 1rem;
     transition:all ease-in-out 0.3s;
     font-weight: 600;
+   
 }
 .btn:hover{
     transform: scale(1.01);

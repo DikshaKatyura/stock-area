@@ -8,6 +8,7 @@
 label{
     font-size: 1rem;
     font-weight: 600;
+    text-transform: capitalize;
 }
 .inputs input{
     padding: 0.5rem;
@@ -24,9 +25,16 @@ label{
 .radios{
     flex-direction: row;
     gap: 0;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
 }
 .radios input{
     margin-bottom: 0;
+}
+
+@media (max-width : 480px) {
+    .inputs input{
+        padding: 0.25rem;
+        margin-bottom: 0.5rem;
+    }
 }

@@ -1,23 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./FilterOptions.module.css";
 import { filterActions } from "../store/filterSlice";
-import FilterOptionsMob from "./FilterOptionsMob";
+import Modal from "../UI/Modal";
+import img from '../assets/cancel.png';
 import { dataActions } from "../store/dataSlice";
-import img from '../assets/slider.png';
 
-const FilterOptions = () => {
-  const dispatch = useDispatch();
-  const cities = useSelector((state) => state.data.cities);
-  const clusters = useSelector((state) => state.data.clusters);
-  const spaces = useSelector((state) => state.data.spaces);
-  const showModal = useSelector((state) => state.data.showModal);
 
-  return (
-    <div className={styles.filterContainer}>
-      <h3>Filter By</h3>
-      <h5 onClick={()=> {dispatch(dataActions.setShowModal())}}>Filter <img src={img} alt="filter button" /></h5>
-      {showModal && <FilterOptionsMob/>}
-      <div className={styles.filterName_container}>
+const FilterOptionsMob = () =>{
+    const dispatch = useDispatch();
+    const cities = useSelector((state) => state.data.cities);
+    const clusters = useSelector((state) => state.data.clusters);
+    const spaces = useSelector((state) => state.data.spaces);
+  
+   return( 
+   <Modal>
+    <div className={styles.cancel}><img src={img} alt="cancel button" onClick={()=>{dispatch(dataActions.setShowModal())}}/></div>
+<div className={styles.filterContainer}>
+      <div className={styles.filterName_container_mob}>
         <div className={styles.filterName}>
           <h4>City</h4>
           <div>
@@ -26,6 +25,7 @@ const FilterOptions = () => {
                 key={city}
                 onClick={() => {
                   dispatch(filterActions.filterByCity(city));
+                  dispatch(dataActions.setShowModal())
                 }}
               >
                 {city}
@@ -41,6 +41,7 @@ const FilterOptions = () => {
                 key={cluster}
                 onClick={() => {
                   dispatch(filterActions.filterByCluster(cluster));
+                  dispatch(dataActions.setShowModal())
                 }}
               >
                 {cluster}
@@ -56,6 +57,7 @@ const FilterOptions = () => {
                 key={space}
                 onClick={() => {
                   dispatch(filterActions.filterBySpace(space));
+                  dispatch(dataActions.setShowModal())
                 }}
               >
                 {space}
@@ -65,7 +67,8 @@ const FilterOptions = () => {
         </div>
       </div>
     </div>
-  );
-};
+    </Modal>)
 
-export default FilterOptions;
+}
+
+export default FilterOptionsMob;
