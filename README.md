@@ -1,5 +1,7 @@
 <h1>Warehouse Mamagement</h1>
 
+<h5>A Warehouse management application where you can view all the warehouses, their details and edit those details.</h5>
+
  <a href="https://stock-area.vercel.app/" target="_blank">Preview Here</a>
 
 <h1>How to use</h1>
