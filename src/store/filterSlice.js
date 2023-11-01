@@ -33,6 +33,8 @@ const filterSlice = createSlice({
                         city : data.city,
                         cluster : data.cluster,
                        space_available :  data.space_available,
+                       custom_label : data.custom_label,
+                        custom_text : data.custom_text,
                       is_live :  data.is_live,
                         is_registered : data.is_registered
                     }

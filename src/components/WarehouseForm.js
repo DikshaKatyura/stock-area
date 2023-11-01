@@ -16,6 +16,8 @@ const WarehouseForm = () => {
   const cityRef = useRef("");
   const clusterRef = useRef("");
   const spaceRef = useRef("");
+  const customRef = useRef("");
+  const customLabelRef = useRef("");
   const registerRef = useRef(warehouse[0].is_registered);
   const statusRef = useRef(warehouse[0].is_live);
 
@@ -32,7 +34,9 @@ const WarehouseForm = () => {
       cluster : clusterRef.current.value,
      space_available :  spaceRef.current.value,
     is_live :  statusRef.current.value === 'true' ? true : false,
-      is_registered : registerRef.current.value === 'true' ? true : false
+      is_registered : registerRef.current.value === 'true' ? true : false,
+      custom_label : customLabelRef.current.value,
+      custom_text : customRef.current.value
     }}));
     navigate(`/${params.id}`)
   };
@@ -91,6 +95,7 @@ const WarehouseForm = () => {
             }}
             ref={spaceRef}
           />
+         
           <div className={styles["radio-inputs"]}>
             <span>Status: </span>
             <select defaultValue={warehouse[0].is_live} ref={statusRef}>
@@ -107,6 +112,25 @@ const WarehouseForm = () => {
               <option value="false">Not Registered</option>
             </select>
           </div>
+          <h4>Add Custom Field</h4>
+          <div className={styles.custom}>
+          <Inputs
+            details={{
+              type: "text",
+              id: "custom Label",
+              defaultValue: warehouse[0].custom_label || '',
+            }}
+            ref={customLabelRef}
+          />
+          <Inputs
+            details={{
+              type: "text",
+              id: "custom Text",
+              defaultValue: warehouse[0].custom_text || '',
+            }}
+            ref={customRef}
+          />
+          </div>
           <div className={styles.btns}>
             <Button type="submit">Save</Button>
             <Link to={`..`} relative="path">
@@ -115,6 +139,7 @@ const WarehouseForm = () => {
           </div>
         </form>
       )}
+
     </>
   );
 };

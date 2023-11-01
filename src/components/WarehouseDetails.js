@@ -37,6 +37,10 @@ const WarehouseDetails = ({id,warehouse}) =>{
     <h4>Code : </h4>
         <p>{warehouse.code}</p>
     </div>
+    {warehouse.custom_label && <div className={styles.items}>
+    <h4>{warehouse.custom_label}: </h4>
+        <p>{warehouse.custom_text}</p>
+    </div>}
     <div className={styles.items}>
     <h4>Status : </h4>
         {warehouse.is_live && <p className={styles.active}>Active</p>}

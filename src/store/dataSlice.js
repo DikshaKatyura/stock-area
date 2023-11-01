@@ -38,7 +38,8 @@ const dataSlice = createSlice({
     reducers : {
         setShowModal(state){
             state.showModal = !state.showModal;
-        }
+        },
+        
     }
 })
 

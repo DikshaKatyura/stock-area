@@ -1,4 +1,4 @@
-[
+ let warehouses = [
     {
       "name" : "Warehouse-165",
       "code" : "W-00001",
@@ -143,3 +143,5 @@
       "is_live" : false
     }
   ]
+
+  export default warehouses;
