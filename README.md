@@ -1,23 +1,23 @@
-# Warehouse Mamagement
+<h1>Warehouse Mamagement</h1>
 
 ## <a href='https://stock-area.vercel.app/'>Preview Here</a>
 
-### How to use
-# Clone this repository
+<h1>How to use</h1>
+ Clone this repository
 $ git clone https://github.com/DikshaKatyura/stock-area.git
 
-# Go into the repository
+<h1>Go into the repository</h1>
 $ cd stock-area
 
-# Remove current origin repository
+<h1>Remove current origin repository</h1>
 $ git remote remove origin
 
 Then you can install the dependencies
 
 Using NPM:
-# Install dependencies
+<h1>Install dependencies</h1>
 $ npm install
 
 Then run the Project
-# Run project
+<h1>Run project</h1>
 $ npm start
