@@ -1,6 +1,6 @@
 <h1>Warehouse Mamagement</h1>
 
- <a href="https://stock-area.vercel.app/">Preview Here</a> : https://stock-area.vercel.app/
+ <a href="https://stock-area.vercel.app/" target="_blank">Preview Here</a>
 
 <h1>How to use</h1>
  Clone this repository
